@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well">
+        <h1>Cliente con Nombre:  <%= @cliente.nombre%></h1>
+
+        <div class="panel panel-primary">
+        <table class="table table-condensed">
+          <tr>
+            <td>
+              <p>Nombre:</p>
+              <b><%= @cliente.nombre%></b>
+            </td>
+            <td>
+               <p>Apellido:</p>
+              <b><%= @cliente.apellido%></b>
+            </td>
+            <td>
+               <p>Direccion:</p>
+              <b><%= @cliente.direccion%></b>
+            </td>
+            <td>
+               <p>Telefono:</p>
+              <b><%= @cliente.telefono%></b>
+            </td>
+          </tr>
+
+        </table>
+          <br />
+          <p class="btn btn-primary"> <%= link_to "Atras", :back%></p>
+          <p class="btn btn-primary"><%= link_to "Editar", :controller => "clientes", :action => "editar_cliente",
+                  :id => @cliente %></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+uno:
+  id: 1
+  nombre: Sam
+  apellido: Winchester
+  direccion: Los Angeles
+  telefono: 011 7877827
+  
+dos:
+  id: 2
+  nombre: Dean
+  apellido: Winchester
+  direccion: Los Angeles
+  telefono: 011 7877827
+
+

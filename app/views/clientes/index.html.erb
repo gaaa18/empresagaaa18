@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well">
+        <h1>Listado de Clientes Agregados</h1>
+        <br />
+        <br />
+        <a href="<%= clientes_nuevo_cliente_path%>" class="btn btn-primary">Agregar Cliente</a>
+        <br />
+        <br />
+        <div class="panel panel-primary">
+        <table class="table table-hover ">
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+          </tr>
+            <% @clientes.each do |c| %>
+          <tr>
+            <td><%= c.nombre%></td>
+            <td><%= c.apellido%></td>
+            <td><%= c.direccion%></td>
+            <td><%= c.telefono%></td>
+            <td class="btn btn-primary"><%= link_to "Editar", :controller => "clientes",
+                :action => "editar_cliente", :id => c %></td>
+            <td class="btn btn-primary"><%= link_to "Mostrar", :controller => "clientes",
+                :action => "mostrar_cliente", :id => c %></td>
+            <td class="btn btn-primary"><%= link_to "Eliminar", :controller => "clientes",
+:action => "borrar_cliente", :id => c, :method => :delete %></td>
+          </tr>
+            <%end%>
+        </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
